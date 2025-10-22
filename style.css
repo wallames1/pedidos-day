@@ -1,0 +1,212 @@
+/* ------------------------------------------------------------------- */
+/* 1. ESTILO DO BODY (DARK MODE) */
+/* ------------------------------------------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fundo escuro para a tela inteira */
+    background-color: #1a1a2e; 
+    margin: 0;
+    padding: 20px;
+    /* Cor de texto clara para contraste */
+    color: #f0f0f0; 
+    
+    /* Centralização na tela */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. ESTILO DO CONTAINER (GLASSMORPHISM) */
+/* ------------------------------------------------------------------- */
+.container {
+    max-width: 600px;
+    
+    /* Fundo semi-transparente para Glassmorphism */
+    background: rgba(255, 255, 255, 0.05); 
+    /* Efeito de Vidro Fosco */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    
+    padding: 30px; 
+    border-radius: 16px; 
+    
+    /* Borda semi-transparente e sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Sombra de luxo (roxo/magenta) */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), 
+                0 0 20px rgba(106, 13, 173, 0.15); 
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. ESTILO DO TÍTULO (GRADIENTE) */
+/* ------------------------------------------------------------------- */
+h1 {
+    text-align: center;
+    
+    /* Gradiente em roxo/magenta para combinar com o Glassmorphism */
+    background-image: linear-gradient(to right, #a500ff, #6a0dad); 
+    
+    /* Propriedades para texto gradiente */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5em; /* Ajustado um pouco menor para o h1 */
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 4. ESTILO DAS TABS (Abas) */
+/* ------------------------------------------------------------------- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.tab-button {
+    /* Fundo escuro sutil */
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px; /* Arredondamento completo */
+    color: #ccc;
+    transition: all 0.3s;
+    margin: 0 5px; /* Espaçamento entre botões */
+}
+.tab-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+.tab-button.active {
+    /* Gradiente de destaque roxo para a aba ativa */
+    background: linear-gradient(90deg, #6a0dad, #a500ff);
+    color: white;
+    box-shadow: 0 0 8px rgba(165, 0, 255, 0.4);
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. ESTILO DA ÁREA DE TEXTO E LABELS */
+/* ------------------------------------------------------------------- */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+textarea {
+    width: 100%;
+    box-sizing: border-box; 
+    height: 150px;
+    padding: 15px; 
+    /* Fundo escuro para input */
+    background-color: #2a2a47; 
+    border: 1px solid #6a6a99;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 16px;
+    color: #f0f0f0;
+    transition: all 0.3s;
+}
+textarea:focus {
+    outline: none;
+    border-color: #a500ff; /* Foco roxo */
+    box-shadow: 0 0 10px rgba(165, 0, 255, 0.5);
+}
+
+/* ------------------------------------------------------------------- */
+/* 6. ESTILO DOS BOTÕES */
+/* ------------------------------------------------------------------- */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: center;
+}
+button {
+    /* Gradiente para o botão, combinando com o destaque roxo */
+    background: linear-gradient(90deg, #6a0dad, #a500ff);
+    color: white;
+    border: none;
+    padding: 12px 25px; 
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+}
+button:hover {
+    background: linear-gradient(90deg, #5c00a3, #9000e6);
+    transform: scale(1.02);
+}
+
+/* ------------------------------------------------------------------- */
+/* 7. ESTILO DA LISTA (HISTÓRICO) */
+/* ------------------------------------------------------------------- */
+#historico h2 {
+    /* Ajuste para o título interno do histórico, sem gradiente */
+    font-size: 1.5em;
+    color: #a500ff;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15px;
+    /* Remove os estilos de gradiente dos h1/h2 mais gerais */
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+/* Estilo da barra de rolagem para combinar com o tema */
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+ul::-webkit-scrollbar-thumb {
+    background-color: #6a0dad;
+    border-radius: 4px;
+}
+ul::-webkit-scrollbar-track {
+    background-color: #2a2a47;
+    border-radius: 4px;
+}
+
+
+li {
+    /* Fundo escuro sutil para os itens */
+    background: rgba(255, 255, 255, 0.05);
+    color: #ccc;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, border-left 0.3s;
+    border-left: 5px solid transparent;
+}
+li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+li.selected {
+    /* Item selecionado com borda roxa */
+    background: rgba(165, 0, 255, 0.1);
+    border-left: 5px solid #a500ff;
+    font-weight: bold;
+    color: white;
+}

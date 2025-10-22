@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos - Impressão Térmica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Pedidos da Day</h1>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('novo')">Novo Pedido</button>
+            <button class="tab-button" onclick="showTab('historico')">Histórico</button>
+        </div>
+        
+        <div id="novo" class="tab-content active">
+            <label for="pedido-text">Digite o pedido:</label>
+            <textarea id="pedido-text" placeholder="Ex.: 1 Sushi burguer, 1 tepan..."></textarea>
+            <div class="buttons">
+                <button onclick="salvarEImprimirPedido()">Salvar e Imprimir Pedido</button>
+            </div>
+        </div>
+        
+        <div id="historico" class="tab-content">
+            <h2>Histórico (mais recente primeiro):</h2>
+            <ul id="lista-historico"></ul>
+            <div class="buttons">
+                <button onclick="imprimirSelecionado()">Imprimir Selecionado</button>
+                <button onclick="atualizarHistorico()">Atualizar</button>
+            </div>
+        </div>
+    </div> <script src="script.js"></script>
+</body>
+</html>
