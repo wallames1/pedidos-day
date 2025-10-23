@@ -72,13 +72,13 @@ function salvarEImprimirPedido() {
     salvarHistorico(historico);
     
     // 2. Prepara o conteúdo para impressão
-    const conteudo = `Pedido:\n--------------------------------\n${formatarTexto(texto)}\n--------------------------------\nData/Hora: ${dataHora}`;
+    const conteudo = `${formatarTexto(texto)}\nData/Hora: ${dataHora}`;
     imprimirConteudo(conteudo);
 
     // 3. Limpa a área de texto e atualiza a lista do histórico
     document.getElementById('pedido-text').value = '';
     atualizarListaHistorico();
-    alert('Pedido impresso e salvo no histórico!');
+    
 }
 
 function imprimirSelecionado() {
@@ -97,13 +97,13 @@ function imprimirConteudo(conteudo) {
     printWindow.document.write(`
         <html>
         <head><title>Imprimir Pedido</title></head>
-        <body style="font-family: monospace; white-space: pre-wrap; margin: 0; padding: 10px; font-size: 12px;">${conteudo}</body>
+        <body style="font-family: monospace; white-space: pre-wrap; margin: 0; padding: 10px; font-size: 26px;">${conteudo}</body>
         </html>
     `);
     printWindow.document.close();
     printWindow.focus(); 
     printWindow.print();
-    // printWindow.close(); // Comentei para que a janela não feche automaticamente após a impressão.
+    printWindow.close(); // Comentei para que a janela não feche automaticamente após a impressão.
 }
 
 function atualizarHistorico() {

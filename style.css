@@ -1,14 +1,21 @@
-/* ------------------------------------------------------------------- */
+/* # 1. Adiciona as alterações
+git add . 
+
+# 2. Cria um novo registro com uma mensagem descritiva
+git commit -m "Adicionado funcionalidade de seleção na lista de histórico"
+
+# 3. Envia as alterações para o GitHub
+git push */
 /* 1. ESTILO DO BODY (DARK MODE) */
 /* ------------------------------------------------------------------- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* Fundo escuro para a tela inteira */
-    background-color: #1a1a2e; 
+    background-color: #ffffff; 
     margin: 0;
     padding: 20px;
     /* Cor de texto clara para contraste */
-    color: #f0f0f0; 
+    color: #f0ebeb; 
     
     /* Centralização na tela */
     display: flex; 
@@ -24,10 +31,9 @@ body {
     max-width: 600px;
     
     /* Fundo semi-transparente para Glassmorphism */
-    background: rgba(255, 255, 255, 0.05); 
+    background: rgb(237, 235, 240); 
     /* Efeito de Vidro Fosco */
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
+    
     
     padding: 30px; 
     border-radius: 16px; 
@@ -71,12 +77,12 @@ h1 {
 }
 .tab-button {
     /* Fundo escuro sutil */
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(228, 221, 221);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 8px; /* Arredondamento completo */
-    color: #ccc;
+    color: #0800009a;
     transition: all 0.3s;
     margin: 0 5px; /* Espaçamento entre botões */
 }
@@ -103,7 +109,7 @@ label {
     display: block;
     margin-bottom: 10px;
     font-weight: 500;
-    color: #e0e0e0;
+    color: #0e0a0a;
 }
 textarea {
     width: 100%;
@@ -111,12 +117,12 @@ textarea {
     height: 150px;
     padding: 15px; 
     /* Fundo escuro para input */
-    background-color: #2a2a47; 
+    background-color: #402a471a; 
     border: 1px solid #6a6a99;
     border-radius: 10px;
     resize: vertical;
     font-size: 16px;
-    color: #f0f0f0;
+    color: #f1f1f1;
     transition: all 0.3s;
 }
 textarea:focus {
@@ -164,7 +170,6 @@ button:hover {
     margin-bottom: 15px;
     /* Remove os estilos de gradiente dos h1/h2 mais gerais */
     background: none;
-    -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
 }
 
@@ -191,8 +196,8 @@ ul::-webkit-scrollbar-track {
 
 li {
     /* Fundo escuro sutil para os itens */
-    background: rgba(255, 255, 255, 0.05);
-    color: #ccc;
+    background: rgba(255, 255, 255, 0.863);
+    color: #000000;
     padding: 12px;
     margin-bottom: 8px;
     border-radius: 8px;
