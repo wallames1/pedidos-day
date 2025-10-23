@@ -12,6 +12,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* Fundo escuro para a tela inteira */
     background-color: #ffffff; 
+    
     margin: 0;
     padding: 20px;
     /* Cor de texto clara para contraste */
@@ -28,14 +29,19 @@ body {
 /* 2. ESTILO DO CONTAINER (GLASSMORPHISM) */
 /* ------------------------------------------------------------------- */
 .container {
-    max-width: 600px;
+    width: 800px;
+    
     
     /* Fundo semi-transparente para Glassmorphism */
     background: rgb(237, 235, 240); 
     /* Efeito de Vidro Fosco */
+    background-image: url(s.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     
     
-    padding: 30px; 
+    padding: 50px; 
     border-radius: 16px; 
     
     /* Borda semi-transparente e sutil */
@@ -74,6 +80,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    padding-top: 300px;
 }
 .tab-button {
     /* Fundo escuro sutil */
@@ -117,12 +124,12 @@ textarea {
     height: 150px;
     padding: 15px; 
     /* Fundo escuro para input */
-    background-color: #402a471a; 
+    background-color: #938e94da; 
     border: 1px solid #6a6a99;
     border-radius: 10px;
     resize: vertical;
     font-size: 16px;
-    color: #f1f1f1;
+    color: #000000;
     transition: all 0.3s;
 }
 textarea:focus {
@@ -206,11 +213,11 @@ li {
     border-left: 5px solid transparent;
 }
 li:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(255, 255, 255);
 }
 li.selected {
     /* Item selecionado com borda roxa */
-    background: rgba(165, 0, 255, 0.1);
+    background: rgba(166, 0, 255, 0.808);
     border-left: 5px solid #a500ff;
     font-weight: bold;
     color: white;
